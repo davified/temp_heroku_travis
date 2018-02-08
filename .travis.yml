@@ -4,6 +4,10 @@ node_js:
 cache:
   directories:
   - node_modules
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start" # start xvfb for cypress
+  - sleep 3 # give xvfb some time to start
 script:
 - yarn test
 - yarn test:e2e
