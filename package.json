@@ -10,12 +10,17 @@
     "cypress": "^1.4.2",
     "react-scripts": "1.1.0"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:cypress-headless": "cypress run",
     "test:cypress-browser": "cypress open",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "codecov"
   }
 }

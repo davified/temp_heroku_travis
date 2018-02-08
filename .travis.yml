@@ -12,6 +12,8 @@ script:
 - yarn test
 - yarn test:cypress-browser
 - yarn build
+after_success:  
+- yarn coverage
 deploy:
   provider: heroku
   app: rocky-everglades-35084
