@@ -11,8 +11,14 @@
     "react-scripts": "1.1.0"
   },
   "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": -100
+      }
+    }
   },
   "scripts": {
     "start": "react-scripts start",

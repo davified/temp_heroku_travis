@@ -9,11 +9,9 @@ before_script:
   - "sh -e /etc/init.d/xvfb start" # start xvfb for cypress
   - sleep 3 # give xvfb some time to start
 script:
-- yarn test
+- yarn test -- --coverage # run test with coverage
 - yarn test:cypress-headless
 - yarn build
-after_success:  
-- yarn coverage
 deploy:
   provider: heroku
   app: rocky-everglades-35084
