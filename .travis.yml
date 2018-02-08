@@ -14,4 +14,3 @@ deploy:
   app: temp_heroku_travis # to be replaced
   on:
     repo: davified/temp_heroku_travis   # to be replaced
-
