@@ -11,6 +11,6 @@ deploy:
   provider: heroku
   api_key:
     secure: pnz1CMY+Ct8TugJAL4BdRRQjTvsfUhHOTyumUr87dMN6xU6QAXK/HsFgxCy0AXSrwqXZgoA49oj5G5DD9L6DqtuJmn9MUTGake9N9O5ANnrKWiYThcnRwcmrum1yFmOdf8t+KBeC2DzWw51wW5fz2H8p2TNDog2bDt3WI6pOcHp/nVlzF+Q1KU8Y+F0uvnvaXhdpD9oplJvghguye4dRFbsJ5t3vw86W341YqDQkl3Gkoy13aqrMuXZ2wS1wqrezx0nlhF4Y4/FBrViSR6imlsblNtqqiGYQYkYPrQ4mng83pLZRUfO1+pPh59Q1xCWGeV0rbWwnfJrPBrUjG6dBruAIEN0hEvtrurcw/pwDcdpc95NFRXRhsEQb2snA6XI+qfxDfKnBFBUTHmRy0hQmiS1rcV3bjm9zv3PFPyc+DOwlFBdQVciEmtE2PsH1xmLh0zxcRKIhipJKZJk2qdGQqudEcOrQm4xblvp3ONZQs0gbMQTnyc0IvL15rPNcRTCq3nZjUEecoev4MwtD7aUQktzXicz6AzIu9Pxmrh+e7SqCg0oGXG4IJGUhwYu7Fw4YRZ+7Lk8+oCEMoWu/8mfbicVuMaRHU2c4Pafsc/rAmJ+mExdSNmieD06ypQn+ibNQpYrkw+dlxqLwcUE0VTUjGkHP1j5KVPOIkC5+jwyNSDU=
-  app: temp_heroku_travis # to be replaced
+  app: rocky-everglades-35084 # replace with the name of your heroku app
   on:
-    repo: davified/temp_heroku_travis   # to be replaced
+    repo: davified/temp_heroku_travis   # replace with your_username/your_repo_name
