@@ -10,7 +10,7 @@ before_script:
   - sleep 3 # give xvfb some time to start
 script:
 - yarn test
-- yarn test:e2e
+- yarn test:cypress-headless
 - yarn build
 deploy:
   provider: heroku
