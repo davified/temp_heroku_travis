@@ -6,7 +6,7 @@ cache:
   - node_modules
 script:
 - yarn test
-- $(npm bin)/cypress run --record
+- $(npm bin)/cypress run
 - yarn build
 deploy:
   provider: heroku
