@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-  - "9"
+- '9'
 cache:
   directories:
   - node_modules
 script:
-  - yarn test
-  - yarn build
+- yarn test
+- yarn build
 deploy:
   provider: heroku
   api_key:
-    secure: pnz1CMY+Ct8TugJAL4BdRRQjTvsfUhHOTyumUr87dMN6xU6QAXK/HsFgxCy0AXSrwqXZgoA49oj5G5DD9L6DqtuJmn9MUTGake9N9O5ANnrKWiYThcnRwcmrum1yFmOdf8t+KBeC2DzWw51wW5fz2H8p2TNDog2bDt3WI6pOcHp/nVlzF+Q1KU8Y+F0uvnvaXhdpD9oplJvghguye4dRFbsJ5t3vw86W341YqDQkl3Gkoy13aqrMuXZ2wS1wqrezx0nlhF4Y4/FBrViSR6imlsblNtqqiGYQYkYPrQ4mng83pLZRUfO1+pPh59Q1xCWGeV0rbWwnfJrPBrUjG6dBruAIEN0hEvtrurcw/pwDcdpc95NFRXRhsEQb2snA6XI+qfxDfKnBFBUTHmRy0hQmiS1rcV3bjm9zv3PFPyc+DOwlFBdQVciEmtE2PsH1xmLh0zxcRKIhipJKZJk2qdGQqudEcOrQm4xblvp3ONZQs0gbMQTnyc0IvL15rPNcRTCq3nZjUEecoev4MwtD7aUQktzXicz6AzIu9Pxmrh+e7SqCg0oGXG4IJGUhwYu7Fw4YRZ+7Lk8+oCEMoWu/8mfbicVuMaRHU2c4Pafsc/rAmJ+mExdSNmieD06ypQn+ibNQpYrkw+dlxqLwcUE0VTUjGkHP1j5KVPOIkC5+jwyNSDU=
-  app: rocky-everglades-35084 # replace with the name of your heroku app
+    secure: TPzSbjFmtvfZNAhcvZrWXKQhjuWTFgaAV6sgdo59W0uc/VA5B2V6RVPeO8aFIeP2m1OWC0dnasiL89bE2MPNSWe9hswkUecjYRx2dGhrs2tYcNyKCsL1SrGjNTLLNe+1aPpzUctF2aWqid0w00iQjge47DiGFJbHnr/q2GBn5N40iVu3CHDD72gQdkulFINH3Ea2OTtFOz0RKTIHs+DhbpqWudICozcGzR81HTLnvKh4QPFFCss3WAvmZlFObgHLhE6iYpNDeW6rgJB5nxpoFHhoiZrQD6D7L2U/ZzyAvcAk0PfvPvZtFIM07x8KdSh2Bk1iYuOzKENXTn1cN8/FzOOtPAEQ1PwJCG+/yWG8y7RVdi7vl0dR+TUHMzK/x/C2o7NoL8AsZc7V82b1Vudiw/0ISoiLegeGo5sO9Plisr1rmpBZgMJQPLuDqyiTPFQrPnjakjeUvHKwrt5ef5jT+e2dork8vIfey0lBNtdlYW0I93aQDx7fF/OrFAHc5a3eV1NcjV87OBK/2T/wPPPPRUFd+wc935DnTnAlnp97KXK2rhCZ6wQv+1ZwZPRUwPK7CN+Yt8Gkm+UvLPRScltJDkUmoMJS9u/eB6P8LKYWvBIR8f7kB7lGmOpJR+pbS5M/NbqcdNEaZswgubcLs40XuVmhAmab0KRUOaWGRp9+r2w=
+  app: rocky-everglades-35084
   on:
-    repo: davified/temp_heroku_travis   # replace with your_username/your_repo_name
+    repo: davified/temp_heroku_travis
