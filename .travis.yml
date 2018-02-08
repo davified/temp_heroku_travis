@@ -14,16 +14,18 @@ jobs:
   include:
     - stage: unit_tests
       script: yarn test -- --coverage --coverageDirectory=./coverage/ # run test with coverage
+    - stage: publish coverage
+      script: yarn coverage
     - stage: e2e_tests
       script: yarn test:cypress-headless
     - stage: build
       script: yarn build
-after_success:  
-- yarn coverage
-deploy:
-  provider: heroku
-  app: rocky-everglades-35084
-  on:
-    repo: davified/temp_heroku_travis
-  api_key:
-    secure: WkjaIWJk040fMnx7Dvg2yxehHbqjEDu0nUm5JMoELqDP4a2bapLA7vNCWj/fnVgNN54sCT5RI9ksWR8rqmUnwx+pUBzxFtOYH4zfdu30EQqEmucyfcxOQwzVr3KjBGpF9dOi6zQ9Kin5j5yNH0hMowUYd1+87j+roSSqnhJ10l9xdGUqstv5+z5tupqK66ps6Y2OkJpcg0mfGMeJ03k22ZOfR0/lCdA+qiU0XdVwHmg16IvpJuUbgBS8byN3kWR66L8e4jrHrd7mJgSzESOb0EFkq2SfjlFmYTrcjhXoh0gMqzF/Wzn8mSZ94PF6vdDxPs7GjgSQW7XVnqsTJvttL++DSfxfPZABo0wZZ4Uo6ctKMMbNK84PYU5Ihk5KVVBf//0Uemzg7G2MRNZcuTtXIOP0KRQc+S4pBh00tXwrXjLRZF29/jxs7PF9QDcgAY10berWY3B7I+BRREQ/rogpthXDaW+IJHI5C9ibqVOgptvcCgWQzodokibxCfUQQBcS2osxIHU8iYFW2k/JchnYGcf+5OWlfiTcJ1WA/6nnkjvLpZOhYnPhV17Vj+/NeICInkekdeBhQ6V64qIDlyd+RJHiGItG25PKpwtW9vX//YLibyg2Q6501HougsGw7Ni1z0hLHgvLk+6koheSoljb7djLQMRJOAjEyiTkNJ8EQMg=
+    - stage: deploy
+      script: skip
+      deploy:
+        provider: heroku
+        app: rocky-everglades-35084
+        on:
+          repo: davified/temp_heroku_travis
+        api_key:
+          secure: WkjaIWJk040fMnx7Dvg2yxehHbqjEDu0nUm5JMoELqDP4a2bapLA7vNCWj/fnVgNN54sCT5RI9ksWR8rqmUnwx+pUBzxFtOYH4zfdu30EQqEmucyfcxOQwzVr3KjBGpF9dOi6zQ9Kin5j5yNH0hMowUYd1+87j+roSSqnhJ10l9xdGUqstv5+z5tupqK66ps6Y2OkJpcg0mfGMeJ03k22ZOfR0/lCdA+qiU0XdVwHmg16IvpJuUbgBS8byN3kWR66L8e4jrHrd7mJgSzESOb0EFkq2SfjlFmYTrcjhXoh0gMqzF/Wzn8mSZ94PF6vdDxPs7GjgSQW7XVnqsTJvttL++DSfxfPZABo0wZZ4Uo6ctKMMbNK84PYU5Ihk5KVVBf//0Uemzg7G2MRNZcuTtXIOP0KRQc+S4pBh00tXwrXjLRZF29/jxs7PF9QDcgAY10berWY3B7I+BRREQ/rogpthXDaW+IJHI5C9ibqVOgptvcCgWQzodokibxCfUQQBcS2osxIHU8iYFW2k/JchnYGcf+5OWlfiTcJ1WA/6nnkjvLpZOhYnPhV17Vj+/NeICInkekdeBhQ6V64qIDlyd+RJHiGItG25PKpwtW9vX//YLibyg2Q6501HougsGw7Ni1z0hLHgvLk+6koheSoljb7djLQMRJOAjEyiTkNJ8EQMg=
