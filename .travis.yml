@@ -8,10 +8,14 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start" # start xvfb for cypress
   - sleep 3 # give xvfb some time to start
-script:
-- yarn test -- --coverage --coverageDirectory=./coverage/ # run test with coverage
-- yarn test:cypress-headless
-- yarn build
+jobs:
+  include:
+    - stage: unit_tests
+      script: yarn test -- --coverage --coverageDirectory=./coverage/ # run test with coverage
+    - stage: e2e_tests
+      script: yarn test:cypress-headless
+    - stage: build
+      script: yarn build
 after_success:  
 - yarn coverage
 deploy:
